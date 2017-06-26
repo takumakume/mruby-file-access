@@ -7,9 +7,11 @@ before_install:
 install:
     - sudo apt-get -qq install rake bison git gperf
 before_script:
-  - cd ../
   - git clone https://github.com/mruby/mruby.git
   - cd mruby
-  - cp -fp ../mruby-access/.travis_build_config.rb build_config.rb
+  - cp -fp ../.travis_build_config.rb build_config.rb
+  - chmod 400 ../test/fixtures/readable
+  - chmod 600 ../test/fixtures/writable
+  - chmod 700 ../test/fixtures/executable
 script:
   - make all test

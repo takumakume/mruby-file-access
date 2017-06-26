@@ -17,6 +17,9 @@ end
 
 desc "test"
 task :test => :mruby do
+  sh "chmod 400 ./test/fixtures/readable"
+  sh "chmod 600 ./test/fixtures/writable"
+  sh "chmod 700 ./test/fixtures/executable"
   sh "cd mruby && MRUBY_CONFIG=#{MRUBY_CONFIG} rake all test"
 end
 

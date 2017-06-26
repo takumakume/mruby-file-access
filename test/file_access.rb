@@ -1,9 +1,5 @@
 dir = "../test/fixtures/"
 
-File.chmod(0400, "#{dir}readable")
-File.chmod(0600, "#{dir}writable")
-File.chmod(0700, "#{dir}executable")
-
 assert('File::Access') do
   assert_equal(Class, File::Access.class)
 end
