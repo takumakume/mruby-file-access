@@ -10,8 +10,5 @@ before_script:
   - git clone https://github.com/mruby/mruby.git
   - cd mruby
   - cp -fp ../.travis_build_config.rb build_config.rb
-  - chmod 400 ../test/fixtures/readable
-  - chmod 600 ../test/fixtures/writable
-  - chmod 700 ../test/fixtures/executable
 script:
   - make all test
