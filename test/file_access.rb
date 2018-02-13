@@ -1,4 +1,4 @@
-dir = "../test/fixtures/"
+dir = "./build/file-access-fixtures/"
 
 assert('File::Access') do
   assert_equal(Class, File::Access.class)
